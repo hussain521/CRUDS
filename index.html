@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C R U D S</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- google font  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Varela+Round&family=Work+Sans:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-dark">
+    <section class="home" id="home">
+      <div class="cruds-title text-center">
+        <h1 class="text-white">CRUDS</h1>
+        <p class="text-white-50 fs-5 text-uppercase">
+          product management system
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="inputs">
+          <input
+            class="w-100 text-white p-3 mb-3 rounded-3 text-capitalize border-0"
+            type="text"
+            placeholder="title"
+            name=""
+            id="title"
+          />
+          <div class="price row">
+            <div class="col-md-3">
+              <input onkeyup="getTotal()"
+                class="text-white p-3 mb-3 rounded-3 text-capitalize border-0 w-100"
+                type="number"
+                name=""
+                placeholder="price"
+                id="price"
+              />
+            </div>
+            <div class="col-md-2">
+              <input onkeyup="getTotal()"
+                class="text-white p-3 mb-3 rounded-3 text-capitalize border-0 w-100"
+                type="number"
+                name=""
+                placeholder="taxes"
+                id="taxes"
+              />
+            </div>
+            <div class="col-md-2">
+              <input onkeyup="getTotal()"
+                class="text-white p-3 mb-3 rounded-3 text-capitalize border-0 w-100"
+                type="number"
+                name=""
+                placeholder="ads"
+                id="ads"
+              />
+            </div>
+            <div class="col-md-3">
+              <input onkeyup="getTotal()"
+                class="text-white p-3 mb-3 rounded-3 text-capitalize border-0 w-100"
+                type="number"
+                name=""
+                placeholder="discount"
+                id="discount"
+              />
+            </div>
+            <div class="col-md-2 mb-md-0 mt-2 pt-1 mb-4">
+              <small
+                class="text-black bg-warning rounded-3 text-capitalize p-3"
+                id="total"
+              >
+                </small
+              >
+            </div>
+          </div>
+          <input
+            class="text-white p-3 mb-3 rounded-3 text-capitalize border-0 w-100"
+            type="number"
+            placeholder="count"
+            id="count"
+          />
+          <input
+            class="text-white p-3 mb-3 rounded-3 text-capitalize border-0 w-100"
+            type="text"
+            placeholder="category"
+            id="category"
+          />
+          <button class="w-100 p-2 btn-warning btn fw-bold" id="submit">
+            Create
+          </button>
+        </div>
+        <div class="outputs mt-3">
+          <div class="searchBlock">
+            <input
+              class="text-white p-3 mb-3 rounded-3 text-capitalize border-0 w-100"
+              type="text"
+              name=""
+              id="search"
+              placeholder="Search"
+              onkeyup=" searchdata(this.value)"
+            />
+            <div class="btnSearch d-flex justify-content-between">
+              <button class="btn btn-warning w-100 me-1" onclick="getSearch(this.id)" id="searchTitle">
+                Search by Title
+              </button>
+              <button class="btn btn-warning w-100" onclick="getSearch(this.id)" id="searchCategory">
+                Search by Category
+              </button>
+            </div>
+          </div>
+          <div id="deleteAll">
+
+          </div>
+          <div class="table-responsive">
+          <table class=" table align-middle text-white w-100 mt-3 text-center border-top">
+            <thead>
+              <tr class="">
+                <th class="text-uppercase pt-3">id</th>
+                <th class="text-uppercase pt-3">title</th>
+                <th class="text-uppercase pt-3">price</th>
+                <th class="text-uppercase pt-3">taxes</th>
+                <th class="text-uppercase pt-3">ads</th>
+                <th class="text-uppercase pt-3">discount</th>
+                <th class="text-uppercase pt-3">total</th>
+                <th class="text-uppercase pt-3">category</th>
+                <th class="text-uppercase pt-3">update</th>
+                <th class="text-uppercase pt-3">delete</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

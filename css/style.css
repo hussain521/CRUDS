@@ -1,0 +1,29 @@
+	* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none !important;
+	text-decoration: none !important;
+	}
+	body {
+        /* text-transform: capitalize; */
+	scroll-behavior: smooth;
+	font-family: "Dosis", serif !important;
+	}
+    input{
+        outline: none;
+        background-color: #111;
+    }
+    input:focus{
+        background-color: #000;
+    }
+    small::before{
+        content: "total: ";
+    }
+    .btn{
+        transition: 0.3s !important;
+
+    }
+    #submit:hover{
+        letter-spacing: 1px;
+    }
